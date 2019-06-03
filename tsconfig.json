@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    // strictをtrueにすると以下が全部指定される。
+    //   "noImplicitAny": true       // 型推論などで型が決められないときに暗黙的にany扱いにするのを許さない。
+    //   "noImplicitThis": true      // 上記のthis版です。
+    //   "alwaysStrict": true        // "use strict"が書かれてなくても、書いてあったことにしてコンパイルします。
+    //   "strictNullChecks": true    // nullやundefinedが型定義で指定されてないと、それらの代入を禁止する。必須。
+    //   "strictFunctionTypes": true // 後述の、型チェックが「双変性」で緩くなってるのを厳しくします。
+    "strict": true,
+    "noImplicitThis": false,
+    "noImplicitReturns": true, // メソッド内で返り値の型があっているかをチェック
+    "noUnusedLocals": true, // 未使用の変数を警告します。
+    "noUnusedParameters": false, // 未使用の引数を警告。2番目以降の引数だけ使いたいようなときは使わない引数名を `_` から始めると警告が消える。
+    "sourceMap": true,
+    "importHelpers": true,
+    "target": "es5", // ECMAScript5に変換
+    "module": "commonjs", // TSのモジュールはES Modulesとして出力
+    "lib": ["es2017", "dom"], // コンパイルに含めるライブラリー、必要になったら都度追加
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}
